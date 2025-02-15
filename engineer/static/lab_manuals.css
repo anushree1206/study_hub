@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+header {
+    background: #4caf50;
+    color: white;
+    padding: 15px;
+}
+
+.labs {
+    padding: 20px;
+}
+
+.lab-links a {
+    display: block;
+    background: #388e3c;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 5px;
+}

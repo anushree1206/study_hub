@@ -1,0 +1,49 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9; /* Soft light gray */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: #2c3e50; /* Dark Blue-Gray */
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Technical Section */
+.technical {
+    padding: 25px;
+}
+
+/* Resource Links */
+.resource-links a {
+    display: block;
+    background: #3498db; /* Calm Blue */
+    color: white;
+    padding: 12px;
+    margin: 12px auto;
+    width: 260px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.resource-links a:hover {
+    background: #2980b9; /* Slightly darker blue */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resource-links a {
+        width: 80%;
+    }
+}

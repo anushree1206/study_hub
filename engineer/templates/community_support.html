@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Support</title>
+    <link rel="stylesheet" href="{% static 'community_support.css' %}?v=2">
+</head>
+<body>
+
+    <header>
+        <h1>Community Support</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'settings' %}">Settings</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="community">
+        <h2>👥 Join the Discussion</h2>
+        <p>Connect with peers, ask questions, and collaborate.</p>
+        
+        <div class="community-links">
+            <a href="#">Discussion Forums</a>
+            <a href="#">Q&A Sessions</a>
+            <a href="#">Mentor Support</a>
+        </div>
+    </section>
+
+</body>
+</html>

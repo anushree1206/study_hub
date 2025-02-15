@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007acc;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.coding {
+    padding: 20px;
+}
+
+.coding h2 {
+    color: #005a9e;
+}
+
+.coding-links {
+    margin-top: 20px;
+}
+
+.coding-links a {
+    display: block;
+    background: #0099cc;
+    color: white;
+    padding: 12px;
+    margin: 10px auto;
+    width: 250px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.coding-links a:hover {
+    background: #0077aa;
+}

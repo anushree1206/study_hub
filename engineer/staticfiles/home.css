@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0073e6, #00a8ff) !important;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    background: rgb(7, 59, 61);
+    color: aliceblue;
+    font-size: 0.7em;
+    padding: 18px 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+/* Hero Section */
+header {
+    padding: 80px 20px;
+    background: rgb(141, 240, 243);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: rgb(165, 196, 197);
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid var(rgb(91, 91, 231));
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Call-to-Action Section */
+.cta {
+    padding: 60px 20px;
+    background:rgb(141, 240, 243);
+    color:rgb(141, 240, 243);
+}
+section{
+    background-color: rgb(141, 240, 243);;
+}
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    background-color: blue;
+    color: aliceblue;
+}
+
+.btn:hover {
+    background: var(green);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}

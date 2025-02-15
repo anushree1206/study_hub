@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #0056b3;
+    color: white;
+    padding: 15px;
+}
+
+.community {
+    margin: 20px;
+    padding: 20px;
+}
+
+.community-links a {
+    display: block;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 5px;
+}

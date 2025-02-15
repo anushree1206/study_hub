@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="{% static 'profile.css' %}?v=2">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Welcome, {{ request.user.username }}</h2>
+        <p>Email: {{ request.user.email }}</p>
+        <p>More profile details can go here...</p>
+    </section>
+</body>
+</html>
