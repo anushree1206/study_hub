@@ -9,8 +9,8 @@ from .models import StudyMaterial
 
 @csrf_exempt  # This disables CSRF protection for this view
 
-def home(request):
-    return render(request, "home.html")
+def index(request):
+    return render(request, "index.html")
 
 def login_page(request):
     if request.method == "POST":

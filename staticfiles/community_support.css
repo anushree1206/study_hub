@@ -1,27 +1,54 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eef2f7; /* Light grey-blue */
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header Styling */
 header {
-    background: #0056b3;
+    background: #004080; /* Darker blue */
     color: white;
-    padding: 15px;
-}
-
-.community {
-    margin: 20px;
     padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
+/* Community Section */
+.community {
+    margin: 30px auto;
+    padding: 25px;
+    width: 50%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Community Links */
 .community-links a {
     display: block;
-    background: #007bff;
+    background: #007bff; /* Bright blue */
     color: white;
-    padding: 10px;
-    margin: 10px auto;
-    width: 200px;
+    padding: 12px;
+    margin: 12px auto;
+    width: 220px;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.community-links a:hover {
+    background: #0056b3; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .community {
+        width: 80%;
+    }
 }

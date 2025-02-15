@@ -9,15 +9,19 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #277040;
+    background-color: #1b5e20; /* Dark Green */
     color: white;
     padding: 15px;
     text-align: center;
+    font-size: 22px;
+    font-weight: bold;
 }
 
+/* Navigation Styling */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -29,26 +33,32 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ffcc00; /* Yellow hover effect */
+    text-decoration: none;
 }
 
 /* Settings Section */
 .settings-container {
-    background: rgb(134, 127, 127);
+    background: #ffffff; /* White background */
     width: 50%;
     margin: 50px auto;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
 }
 
 h2 {
-    color: #333;
+    color: #1b5e20;
+    text-align: center;
 }
 
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -57,35 +67,68 @@ form {
 
 label {
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    text-align: left;
 }
 
 input, select {
-    width: 80%;
-    padding: 10px;
+    width: 90%;
+    padding: 12px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
 }
 
+input:focus, select:focus {
+    border-color: #1b5e20;
+    outline: none;
+    box-shadow: 0 0 5px rgba(27, 94, 32, 0.3);
+}
+
+/* Button Styling */
 button {
-    background-color: #007bff;
+    background-color: #1b5e20;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
+    padding: 12px 25px;
+    margin-top: 20px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
+button:hover {
+    background-color: #145214; /* Slightly darker green */
+}
+
+/* Message Box */
 .messages {
     background-color: #d4edda; /* Light green */
     color: #155724; /* Dark green text */
     border: 1px solid #c3e6cb;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
