@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Study Hub</title>
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}?v=2">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Engineering Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href=" {% url 'settings' %}">Settings</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <div class="hub-category" onclick="location.href='{% url "study_materials" %}'">
+            <h2>📚 Study Materials</h2>
+            <p>Notes, PDFs, and video tutorials.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "community_support" %}'">
+            <h2>👥 Community Support</h2>
+            <p>Forums, peer discussions, and Q&A.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "technical_resources" %}'">
+            <h2>🛠️ Technical Resources</h2>
+            <p>Coding platforms, projects, tools.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "career_guidance" %}'">
+            <h2>🎯 Career Guidance</h2>
+            <p>Roadmaps, internships, job prep.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "lab_manuals" %}'">
+            <h2>🔬 Lab Manuals & Projects</h2>
+            <p>Experiments and mini-projects.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "events_hackathons" %}'">
+            <h2>📅 Events & Hackathons</h2>
+            <p>Competitions, workshops, and coding contests.</p>
+        </div>
+
+        <div class="hub-category"  onclick="location.href='{% url "coding_challenges" %}'">
+            <h2>🎮 Coding Challenges</h2>
+            <p>Practice coding problems and contests.</p>
+        </div>
+    </section>
+
+    <section id="details-section" class="hidden">
+        <h2 id="details-title"></h2>
+        <p id="details-content"></p>
+    </section>
+
+    <script src="{% static 'dashboard.js' %}"></script>
+</body>
+</html>

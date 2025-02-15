@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials - Engineering Study Hub</title>
+    <link rel="stylesheet" href="{% static 'study_materials.css' %}?v=2">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Study Materials</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'settings' %}">Settings</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Study Materials Section -->
+    <section class="study-materials">
+        <h2>📚 Access Engineering Study Materials</h2>
+        <p>Download high-quality notes, PDFs, and video tutorials.</p>
+
+        <!-- Material Categories -->
+        <div class="material-category">
+            <div class="category" onclick="showContent('notes')">📖 Notes & PDFs</div>
+            <div class="category" onclick="showContent('videos')">🎥 Video Tutorials</div>
+            <div class="category" onclick="showContent('ebooks')">📚 E-Books</div>
+            <div class="category" onclick="showContent('practice')">📝 Practice Papers</div>
+        </div>
+
+        <!-- Content Section -->
+        <div id="content-section" class="hidden">
+            <h3 id="content-title"></h3>
+            <p id="content-description"></p>
+            <a id="download-link" class="download-btn" href="#">Download</a>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function showContent(type) {
+            const contentTitle = document.getElementById("content-title");
+            const contentDescription = document.getElementById("content-description");
+            const downloadLink = document.getElementById("download-link");
+            const contentSection = document.getElementById("content-section");
+
+            let title, description, filePath;
+
+            switch (type) {
+                case "notes":
+                    title = "📖 Notes & PDFs";
+                    description = "Download lecture notes, study PDFs, and important reference materials.";
+                    filePath = "{% static 'materials/notes.pdf' %}";
+                    break;
+                case "videos":
+                    title = "🎥 Video Tutorials";
+                    description = "Watch recorded lectures and tutorial videos for better understanding.";
+                    filePath = "{% static 'materials/tutorials.mp4' %}";
+                    break;
+                case "ebooks":
+                    title = "📚 E-Books";
+                    description = "Access subject-related e-books to enhance your learning.";
+                    filePath = "{% static 'materials/ebook.pdf' %}";
+                    break;
+                case "practice":
+                    title = "📝 Practice Papers";
+                    description = "Solve previous years' question papers and practice tests.";
+                    filePath = "{% static 'materials/practice.pdf' %}";
+                    break;
+                default:
+                    title = "Study Materials";
+                    description = "Select a category to view details.";
+                    filePath = "#";
+            }
+
+            contentTitle.innerText = title;
+            contentDescription.innerText = description;
+            downloadLink.href = filePath;
+            contentSection.classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>

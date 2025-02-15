@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff3cd;
+    text-align: center;
+}
+
+header {
+    background: #ffc107;
+    color: black;
+    padding: 15px;
+}
+
+.career {
+    padding: 20px;
+}
+
+.career-links a {
+    display: block;
+    background: #ff9800;
+    color: black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 5px;
+}
